@@ -1,0 +1,257 @@
+body {
+  background-color: #121212 !important; /* Ensure high specificity with !important */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header .logo {
+  width: 150px;
+  height: 150px;
+}
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  width: 90%;
+  padding: 20px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  flex: 0 0 250px;
+  text-align: center;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.sidebar p {
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  color: #45a049;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.search-bar,
+.search-category {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"],
+.search-category select {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.post {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.post-author,
+.post-timestamp,
+.post-category {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.post-content {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.post-profile-picture-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.post-profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.post-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.post-button:hover {
+  background-color: #565656;
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: #1e1e1e !important; /* Darker grey background */
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-header {
+  background-color: #2a2a2a !important; /* Dark grey background */
+}
+
+.modal-footer {
+  background-color: #2a2a2a !important; /* Dark grey background */
+}
+
+.modal-title {
+  color: #ffffff !important; /* Lighten the top text */
+}
+
+.form-control {
+  background-color: #333 !important; /* Dark grey background */
+  color: #ffffff !important; /* White text */
+  border: 1px solid #444 !important; /* Darker border */
+  box-shadow: none !important; /* Remove shadow */
+}
+
+.form-control:focus {
+  border-color: #4caf50 !important; /* Green border on focus */
+  box-shadow: none !important; /* Remove shadow on focus */
+}
+
+.form-control {
+  background-color: #333 !important; /* Dark grey background */
+  color: #ffffff !important; /* White text */
+  border: 1px solid #444; /* Darker border */
+}
+
+.form-label {
+  color: #bbb;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #565656;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .search-bar input[type="text"],
+  .search-category select {
+      width: 100%;
+  }
+}
+
+.post-link-container {
+  display: block;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.post-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-link:hover {
+  color: #45a049;
+  text-decoration: underline;
+}
+
+/* New style for comment input */
+.comment-input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #333;
+  color: #000; /* Set text color to black */
+}
