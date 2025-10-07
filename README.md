@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+🥔 Potato Services
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Potato Services offers a broad set of features designed to enhance the volunteer matching experience for both individuals and organizations.
 
-## Available Scripts
+Users can create personalized profiles, enabling them to log in, manage their activities, and track their posts and applications easily.
+The Home Page acts as a central hub, displaying all available volunteer opportunities categorized and timestamped for quick browsing.
 
-In the project directory, you can run:
+Users can create and delete posts to seek volunteers, specifying titles, content, categories, and locations with Google Maps integration.
+The platform also supports comments, likes, and reports, promoting interaction and community trust.
 
-### `npm start`
+Advanced search filters allow sorting by time, category, or keywords, while the application feature makes it easy to apply directly to volunteer posts — simplifying communication between volunteers and organizations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🚀 Deployment Instructions (For Administrator)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Download the React App
 
-### `npm test`
+Download the ZIP file of the repository and extract it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You’ll get a folder named final-project-potato-services.
 
-### `npm run build`
+2. Open the Project in an IDE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open the extracted folder in an IDE such as Visual Studio Code (VSC).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Update the IP Address
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Find your current IP address on Mac:
+Settings → Wi-Fi → [Your Connected Network] → IP Address
 
-### `npm run eject`
+In VSC, use Find and Replace (Cmd + Shift + F) to replace the existing IP address across all files:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+CreatePost.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Home.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Login.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Profile.js
 
-## Learn More
+Signup.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+App.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Replace the old IP with your current one.
 
-### Code Splitting
+4. Start the Backend Server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open two terminal windows in your IDE.
 
-### Analyzing the Bundle Size
+Terminal 1:
+cd src
+node server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you see output confirming that database tables were successfully created, the server is running correctly and connected to the database.
 
-### Making a Progressive Web App
+5. Start the Frontend
+   Terminal 2:
+   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The app will automatically open in your browser at:
+👉 http://localhost:3000
 
-### Advanced Configuration
+To access it from other devices on your network, use the "On Your Network" link that appears in the terminal after running npm start.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+6. Accessing the App on Other Devices
 
-### Deployment
+Use the "On Your Network" link to open the app on other devices connected to the same Wi-Fi network.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Share this link with other users or testers.
 
-### `npm run build` fails to minify
+🛠️ Troubleshooting
+🔹 IP Address Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ensure the IP address in your code matches your current device’s IP.
+This is essential for connecting from other devices.
+
+🔹 node_sqlite3 Permission
+
+If you see an error while running node server.js:
+
+Click OK on the error dialog.
+
+Go to Settings → Privacy & Security.
+
+Scroll to the security alert for node_sqlite3 and click Allow Anyway.
+
+Re-run:
+
+node server.js
+
+The server should now run and connect to the database successfully.
+
+🗃️ Database Access (For Administrator)
+
+1. Navigate to the Project Directory
+   cd ~/Documents/final-project-potato-services/src
+
+2. Open the SQLite Database
+   sqlite3 db.sqlite
+
+If you don’t have SQLite installed:
+
+brew install sqlite
+
+3. Common Database Commands
+
+List all tables:
+
+.tables
+
+View all rows in a table (example: comments):
+
+SELECT \* FROM comments;
+
+Exit the SQLite console:
+
+.exit
+
+⚙️ Tech Stack
+
+Frontend: React.js
+
+Backend: Node.js (Express)
+
+Database: SQLite
+
+Map Integration: Google Maps API
